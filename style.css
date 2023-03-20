@@ -1,0 +1,253 @@
+:root {
+  --preto: #1b0c09;
+  --vermelho: #7b2121;
+  --vermelhoEscuro: rgba(123, 33, 33, 0.65);
+  --bege: #f2e5d0;
+}
+
+/* estilos globais */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  color: var(--bege);
+  background-color: var(--preto);
+  font-family: "Nunito Sans";
+}
+
+/* texto */
+
+h1 {
+  font-family: "Italiana";
+  font-size: 64px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: none;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.texto {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.fa {
+  color: var(--bege);
+}
+
+/* links */
+
+a {
+  font-family: "Nunito Sans";
+  font-size: 24px;
+  color: var(--bege);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:visited {
+  text-decoration: none;
+  color: var(--bege);
+}
+
+/* nav */
+
+nav {
+  height: 128px;
+  background-color: var(--vermelho);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  margin-bottom: 64px;
+}
+
+#links {
+  width: 640px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5em;
+}
+
+#navDiv {
+  padding: 0 128px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* conteúdo principal */
+
+main {
+  padding: 0 128px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 96px;
+}
+
+/* produtos */
+
+.produtosDiv {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 32px;
+}
+
+#produtos {
+  width: 100%;
+}
+
+img {
+  height: 90%;
+  width: 90%;
+}
+
+.produtoFundo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 280px;
+  height: 280px;
+  background-color: var(--bege);
+
+  margin-bottom: 24px;
+}
+
+.produto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subtitulo {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* quem somos */
+
+#quemSomos {
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+#quemSomosTexto {
+  font-size: 18px;
+  line-height: 26px;
+
+  height: 240px;
+  width: 40%;
+  padding: 32px;
+  background-color: var(--vermelho);
+
+  position: absolute;
+  right: 0;
+}
+
+#quemSomosFoto {
+  height: 70%;
+  width: 70%;
+
+  object-fit: cover;
+}
+
+#quemSomos h3 {
+  margin-bottom: 16px;
+}
+
+#quemSomos p {
+  margin-bottom: 8px;
+}
+
+/* footer/contato */
+
+footer {
+  padding-top: 32px;
+  background-color: var(--vermelhoEscuro);
+  padding-left: 128px;
+  padding-right: 128px;
+}
+
+#contatoConteudo {
+  display: flex;
+  justify-content: space-between;
+
+  padding-bottom: 32px;
+  line-height: 24px;
+}
+
+.contatoDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.contatoDiv div {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 8px;
+}
+
+.contatoDiv div h4 {
+  margin-bottom: 4px;
+}
+
+.ondeEstamos {
+  width: 50%;
+}
+
+.mapa {
+  overflow: hidden;
+  padding-bottom: 240px;
+  position: relative;
+  height: 0;
+}
+
+.mapa iframe {
+  left: 0;
+  top: 0;
+  height: 240px;
+  width: 100%;
+  position: absolute;
+}
+
+i {
+  margin-right: 3px;
+}
