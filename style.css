@@ -196,7 +196,25 @@ img {
   margin-bottom: 8px;
 }
 
-/* footer/contato */
+/* whatsapp */
+
+#wpp {
+  position: fixed;
+  right: 2em;
+  bottom: 2em;
+  
+  width: 3em;
+  height: 3em;
+
+  transition: 100ms;
+}
+
+#wpp:hover {
+  width: 3.5em;
+  height: 3.5em;
+}
+
+/* footer e contato */
 
 footer {
   padding-top: 32px;

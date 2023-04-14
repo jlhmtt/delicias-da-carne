@@ -151,3 +151,69 @@ function checar() {
   }
 
 }
+
+// VALIDAÇÃO
+
+let formNome = document.getElementById('formNome')
+let formEmail = document.getElementById('formEmail')
+let formTel = document.getElementById('formTel')
+let mensagem = document.getElementById('mensagem')
+
+function enviar() {
+
+  event.preventDefault()
+
+  if (!nome()) {
+    
+    // nome
+    alert('Preencha o campo "Nome" corretamente. Ele deve conter pelo menos dois nomes.')
+    
+  } else if (!email()) {
+    
+    // email
+    alert('Preencha o campo "E-mail" corretamente.')
+    
+  } else if (!telefone()) {
+    
+    //telefone
+    alert('Preencha o campo "Telefone corretamente. Ele deve ter 11 dígitos (telefone e DDD)."')
+  } else if (spanRadio1.style.backgroundColor == '' && spanRadio2.style.backgroundColor == '' && spanRadio3.style.backgroundColor == '') {
+    
+    // radio buttons
+    alert('Preencha o campo "Qual a sua preferência de carne?"')
+    
+  } else if (!box1.classList.contains('marcado') && !box2.classList.contains('marcado') && !boxPai.classList.contains('marcado')) {
+    
+    // checkbox
+    alert('Preencha o campo "Como você prefere ser contatade?"')
+    
+  } else if (mensagem.value.length < 5) {
+
+    // mensagem
+    alert('A sua mensagem deve ter pelo menos 5 caracteres.')
+    
+  } else {
+    // tudo certo
+    alert('Obrigado pela mensagem! Entraremos em contato em breve (:')
+  }
+
+}
+
+function nome() {
+  if (formNome.value.includes(' ') && formNome.value.length > 3) {
+    return true
+  }
+}
+
+function email() {
+  if (formEmail.value[0] != '@' && formEmail.value.includes('.', formEmail.value.indexOf('@')) && formEmail.value[formEmail.value.indexOf('@') + 1] != '.') {
+    return true
+  }
+}
+
+function telefone() {
+  if (formTel.value.length == 11) {
+    return true
+  }
+}
+

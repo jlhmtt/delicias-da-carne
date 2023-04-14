@@ -1,8 +1,72 @@
 #faleMain {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
 
   margin-bottom: 4em;
+}
+
+#faleMain h4 {
+  margin-bottom: 1em;
+}
+
+#imagem {
+  height: 100%;
+}
+
+#imagemDiv {
+  width: 35%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 10em;
+}
+
+form input {
+  font-family: "Nunito Sans";
+  
+  line-height: 2em;
+  border-radius: 5px;
+}
+
+button {
+  cursor: pointer;
+  
+  height: 3em;
+  width: 8em;
+
+  border: 8px solid var(--vermelho);
+  border-radius: 5px;
+
+  font-size: 1em;
+  font-weight: bold;
+
+  color: var(--preto);
+}
+
+#mensagem {
+  font-family: "Nunito Sans";
+  padding: 0.5em;
+}
+
+/* whatsapp */
+
+#wpp {
+  position: fixed;
+  right: 2em;
+  bottom: 2em;
+  
+  width: 3em;
+  height: 3em;
+
+  transition: 100ms;
+}
+
+#wpp:hover {
+  width: 3.5em;
+  height: 3.5em;
 }
