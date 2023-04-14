@@ -10,13 +10,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Nunito+Sans&display=swap" rel="stylesheet">
-  <link href="reset.css" rel="stylesheet" type="text/css" />
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link href="faleconosco.css" rel="stylesheet" type="text/css" />
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link href="radio.css" rel="stylesheet" type="text/css" />
-  <link href="select.css" rel="stylesheet" type="text/css" />
-  <link href="checkbox.css" rel="stylesheet" type="text/css" />
+  <link href="reset.css" rel="stylesheet" type="text/css">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="faleconosco.css" rel="stylesheet" type="text/css">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="radio.css" rel="stylesheet" type="text/css">
+  <link href="select.css" rel="stylesheet" type="text/css">
+  <link href="checkbox.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -36,78 +36,99 @@
 
   <main id="faleMain">
 
-    <div id="imagem">
-      <img src="/assets/acougueiro.jpg" alt="Homem atrás de um balcão entregando carne embalada para o cliente">
+    <div id="imagemDiv">
+      <img src="/assets/acougueiro.jpg" id='imagem'
+        alt="Homem atrás de um balcão entregando carne embalada para o cliente">
     </div>
 
     <div id="conteudo">
 
-    <section id="formulario">
-      <form>
-        <input type="text">
-        <input type="email">
-        <input type="tel">
-      </form>
-    </section>
+      <h3>Fale Conosco</h3>
 
-    <section id="radio">
-
-      <section>
-        <span id="spanRadio1" onclick="marcarExoticas()"></span>
-        <div class="div" onclick="marcarExoticas()">Carnes Exóticas</div>
+      <section id="formulario">
+        <form id="form">
+          <input id="formNome" type="text" placeholder="Nome" minlength="2" required>
+          <input id="formEmail" type="email" placeholder="E-mail" required>
+          <input id="formTel" type="number" placeholder="Telefone" required>
+        </form>
       </section>
 
-      <section>
-        <span id="spanRadio2" onclick="marcarTradicionais()"></span>
-        <div class="div" onclick="marcarTradicionais()">Carnes Tradicionais</div>
+      <section id="radio">
+
+        <h4>Qual a sua preferência de carne?</h4>
+
+        <section>
+          <span id="spanRadio1" onclick="marcarExoticas()"></span>
+          <div class="div" onclick="marcarExoticas()">Carnes Exóticas</div>
+        </section>
+
+        <section>
+          <span id="spanRadio2" onclick="marcarTradicionais()"></span>
+          <div class="div" onclick="marcarTradicionais()">Carnes Tradicionais</div>
+        </section>
+
+        <section>
+          <span id="spanRadio3" onclick="marcarAmbas()"></span>
+          <div class="div" onclick="marcarAmbas()">Ambas</div>
+        </section>
+
       </section>
 
-      <section>
-        <span id="spanRadio3" onclick="marcarAmbas()"></span>
-        <div class="div" onclick="marcarAmbas()">Ambas</div>
+      <section id="select">
+
+        <span class="selectOpcao selecionado" id="select1" onclick="select(this)">Bovina</span>
+        <span class="selectOpcao escondido" id="select2" onclick="select(this)">Suína</span>
+        <span class="selectOpcao escondido" id="select3" onclick="select(this)">Aves</span>
+        <span class="selectOpcao escondido" id="select4" onclick="select(this)">Frutos do Mar</span>
+        <span class="selectOpcao escondido" id="select5" onclick="select(this)">Outras</span>
+
       </section>
 
-    </section>
+      <section id="checkbox">
 
-    <section id="select">
+        <h4>Como você prefere ser contatade?</h4>
 
-      <span class="selectOpcao selecionado" id="select1" onclick="select(this)">Bovina</span>
-      <span class="selectOpcao escondido" id="select2" onclick="select(this)">Suína</span>
-      <span class="selectOpcao escondido" id="select3" onclick="select(this)">Aves</span>
-      <span class="selectOpcao escondido" id="select4" onclick="select(this)">Frutos do Mar</span>
-      <span class="selectOpcao escondido" id="select5" onclick="select(this)">Outras</span>
+        <section>
+          <div class="checkbox" id="boxPai" onclick="marcar(this)">
+            <i class="fa-solid fa-minus fa-xl displayNone" id="checkInt"></i>
+            <i class="fa-solid fa-check fa-xl displayNone" id="checkPai"></i>
+          </div>
+          <span>Todos os meios</span>
+        </section>
 
-    </section>
+        <section>
+          <div class="checkbox" id="box1" onclick="marcar(this)">
+            <i id="check1" class="fa-solid fa-check fa-xl displayNone"></i>
+          </div>
+          <span>E-mail</span>
+        </section>
 
-    <section id="checkbox">
+        <section>
+          <div class="checkbox" id="box2" onclick="marcar(this)">
+            <i id="check2" class="fa-solid fa-check fa-xl displayNone"></i>
+          </div>
+          <span>Whatsapp</span>
+        </section>
 
-      <section>
-        <div class="checkbox" id="boxPai" onclick="marcar(this)">
-          <i class="fa-solid fa-minus fa-2x displayNone" id="checkInt"></i>
-          <i class="fa-solid fa-check fa-2x displayNone" id="checkPai"></i>
-        </div>
-        <span>Todos os meios</span>
       </section>
 
-      <section>
-        <div class="checkbox" id="box1" onclick="marcar(this)">
-          <i id="check1" class="fa-solid fa-check fa-2x displayNone"></i>
-        </div>
-        <span>E-mail</span>
-      </section>
+      <h4>Mande uma mensagem:</h4>
 
       <section>
-        <div class="checkbox" id="box2" onclick="marcar(this)">
-          <i id="check2" class="fa-solid fa-check fa-2x displayNone"></i>
-        </div>
-        <span>Whatsapp</span>
+        <textarea id="mensagem" cols="40" rows="10" minlength="5"></textarea>
       </section>
 
-    </section>
+      <button form="form" type="submit" onclick="enviar()">Enviar</button>
 
-    <button onclick="enviar()">Enviar</button>
+    </div>
 
-  </div>
+    <div>
+
+      <a href="https://github.com/jlhmtt">
+        <img src="/assets/whatsapp.png" id="wpp" alt="Ícone do Whatsapp">
+      </a>
+
+    </div>
 
   </main>
 
@@ -121,21 +142,26 @@
 
         <div class="telefoneDiv">
           <h4>Telefone</h4>
+
           <table class="texto">
+
             <tr>
               <td>Telefone fixo:</td>
               <td>(21) 2527-7125</td>
             </tr>
-            <td><i class="fa fa-whatsapp" aria-hidden="true"></i>Whatsapp:</td>
-            <td>(21) 97213-0412</td>
+
             <tr>
+              <td><i class="fa fa-whatsapp" aria-hidden="true"></i>Whatsapp:</td>
+              <td>(21) 97213-0412</td>
+            </tr>
+
             <tr>
               <td></td>
               <td>(21) 99908-4435</td>
             </tr>
 
-            </tr>
           </table>
+
         </div>
 
         <h4>Horário de Funcionamento</h4>
